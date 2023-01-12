@@ -44,16 +44,18 @@ nav li {
 .banner {
   align-items: center;
   display: flex;
-  margin: 50px 200px;
+  margin: 50px 250px;
 }
+
 .banner-title {
   font-weight: 700;
-  font-size: 85px;
+  font-size: 80px;
   margin-bottom: 20px;
+
 }
 .banner-subtitile {
   font-weight: 600;
-  font-size: 45px;
+  font-size: 40px;
   margin-bottom: 5px;
 }
 .banner-description {
@@ -191,7 +193,53 @@ section {
   margin-bottom: 24px;
   border: 0;
   width: 100%;
-  padding: 18px 30px;
+   padding: 18px 30px; 
   border-radius: 5px;
   
 }
+.hide{
+  display: none;
+}
+/* responsive style */
+/* what i do and resume */
+@media screen and (max-width:576px) {
+  nav,.banner, .skills-container , .resume-content , .about-info-container , .contact{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+  nav ul{
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+  .header{
+  background-image: none;
+
+  }
+  .banner{
+    margin: 20px;
+  } 
+  .banner img{
+    width: 100%;
+  }
+  .about, .contact{
+    padding: 20px;
+  }
+  .contact input[type="text"], input[type="email"] , textarea{
+    padding: 15px  0px 15px;
+  }
+}
+@media  screen and (min-width: 578px) and (max-width: 992px) {
+  nav, .banner,.skills-container , .resume-content , .about-info-container, .contact {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .banner img{
+    width: 100%;
+  }
+  .contact input[type="text"], input[type="email"] , textarea{
+    padding: 15px  0px 15px;
+  }
+
+} 
